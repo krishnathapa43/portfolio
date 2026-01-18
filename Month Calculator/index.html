@@ -1,0 +1,147 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Month Difference Calculator</title>
+  <link rel="stylesheet" href="11.css">
+</head>
+
+<body>
+  <header class="topbar">
+    <div class="wrap topbar-inner">
+      <div class="brand">
+        <span class="dot"></span>
+        <span>KRISHNA THAPA</span>
+      </div>
+
+      <div class="top-actions">
+        <button class="btn ghost" id="themeToggle" title="Toggle theme">🌓 Theme</button>
+        <button class="btn ghost" id="printBtn" title="Print / Save as PDF">🖨️ Print/PDF</button>
+      </div>
+    </div>
+  </header>
+
+  <main class="wrap layout">
+    <!-- LEFT: MAIN TOOL -->
+    <section class="card">
+      <div class="card-head">
+        <h2>Month Difference & Custom Interval Calculator</h2>
+        <p class="muted">Live calculation • Timeline • Export • History</p>
+      </div>
+
+      <div class="grid">
+        <div class="field">
+          <label for="startDate">Start Date</label>
+          <input type="date" id="startDate">
+        </div>
+        <div class="field">
+          <label for="endDate">End Date</label>
+          <input type="date" id="endDate">
+        </div>
+      </div>
+
+      <div class="results">
+        <div class="result-box">
+          <div class="result-title">Total Month Difference</div>
+          <div class="result-value"><span id="totalMonths">0</span> <small>months</small></div>
+        </div>
+
+        <div class="result-box">
+          <div class="result-title">Years + Months</div>
+          <div class="result-value">
+            <span id="ymBreakdown">0 years 0 months</span>
+          </div>
+        </div>
+      </div>
+
+      <div class="note-box">
+        <strong>NOTE: Month Reference (For Information Only)</strong><br><br>
+        <strong>12 Months:</strong> <strong>3, 6, 9, 10</strong><br>
+        <strong>18 Months:</strong> <strong>3, 8, 12, 16</strong><br>
+        <strong>2 Years:</strong> <strong>3, 6, 12, 18, 22</strong><br>
+        <strong>3 Years:</strong> <strong>3, 9, 15, 21, 28, 34</strong><br>
+        <strong>4 Years:</strong> <strong>3, 9, 17, 25, 33, 41, 46</strong>
+      </div>
+
+      <div class="field">
+        <label for="customInterval">Custom Month Intervals (comma separated)</label>
+        <input type="text" id="customInterval" placeholder="e.g. 3,6,9,12">
+        <div class="hint">Tip: Only numbers separated by commas. Example: <b>3, 6, 9, 12</b></div>
+      </div>
+
+      <div class="preset-row">
+        <div class="preset-label">Quick presets:</div>
+        <button class="chip" data-preset="12">12 months</button>
+        <button class="chip" data-preset="18">18 months</button>
+        <button class="chip" data-preset="24">2 years</button>
+        <button class="chip" data-preset="36">3 years</button>
+        <button class="chip" data-preset="48">4 years</button>
+      </div>
+
+      <div class="actions">
+        <button class="btn" id="calcBtn">Calculate</button>
+        <button class="btn ghost" id="clearBtn">Clear</button>
+        <button class="btn ghost" id="copyBtn">📋 Copy</button>
+        <button class="btn ghost" id="csvBtn">⬇ Export CSV</button>
+      </div>
+
+      <div class="msg" id="msg"></div>
+
+      <!-- TIMELINE -->
+      <div class="timeline-card">
+        <div class="timeline-head">
+          <b>Timeline</b>
+          <span class="muted">Start → intervals → End</span>
+        </div>
+        <div class="timeline" id="timeline">
+          <div class="timeline-bar"></div>
+          <div class="timeline-label left" id="tlStart">Start</div>
+          <div class="timeline-label right" id="tlEnd">End</div>
+          <!-- markers injected by JS -->
+        </div>
+      </div>
+
+      <!-- TABLE -->
+      <div class="tableWrap">
+        <table id="resultTable">
+          <thead>
+            <tr>
+              <th>Interval (Months)</th>
+              <th>Date Reached</th>
+              <th>Status</th>
+            </tr>
+          </thead>
+          <tbody id="resultBody"></tbody>
+        </table>
+      </div>
+
+      <div class="print-note muted">
+        Print/PDF tip: Click <b>Print/PDF</b> → choose <b>Save as PDF</b>.
+      </div>
+    </section>
+
+    <!-- RIGHT: HISTORY -->
+    <aside class="card history">
+      <div class="card-head">
+        <h3>History</h3>
+        <p class="muted">Last 5 saved calculations</p>
+      </div>
+
+      <div id="historyList" class="historyList"></div>
+
+      <div class="history-actions">
+        <button class="btn ghost" id="clearHistoryBtn">Clear History</button>
+      </div>
+    </aside>
+  </main>
+
+  <footer class="footer">
+    <div class="wrap">
+      © <span id="year"></span> | Made by Krishna Thapa
+    </div>
+  </footer>
+
+  <script src="11.js"></script>
+</body>
+</html>

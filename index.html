@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Cyber Terminal Portfolio</title>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=Share+Tech+Mono&family=Poppins:wght@300;400;600;700&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+  <canvas id="matrix"></canvas>
+  <div class="scanlines"></div>
+
+  <header>
+    <div class="wrap">
+      <div class="nav">
+        <div class="brand">
+          <span class="pulse"></span>
+          <span>root@krishna-portfolio:~</span>
+        </div>
+
+        <nav class="menu">
+          <a href="#projects">/projects</a>
+          <a href="#about">/about</a>
+          <a href="#contact">/contact</a>
+          <a href="Month Calculator/11.html">/Month Calculator</a>
+          <a class="btn" href="#" id="themeBtn">⟲ theme</a>
+        </nav>
+
+        <button class="mobileBtn" id="openDrawer" aria-label="Open menu">☰</button>
+      </div>
+    </div>
+  </header>
+
+  <!-- Mobile Drawer -->
+  <div class="overlay" id="drawerOverlay"></div>
+  <aside class="drawer" id="drawer">
+    <div class="drawerTop">
+      <div class="brand"><span class="pulse"></span><span>menu</span></div>
+      <button class="xbtn" id="closeDrawer" aria-label="Close">✕</button>
+    </div>
+    <a class="dlink" href="#projects">/projects</a>
+    <a class="dlink" href="#about">/about</a>
+    <a class="dlink" href="#contact">/contact</a>
+    <a class="dlink" href="Month Calculator/11.html">/Month Calculator</a>
+    <a href="#" id="themeBtn2" class="btn" style="justify-content:center; width:100%;">⟲ toggle theme</a>
+    <div class="sep"></div>
+    <!-- <div class="badge"><i></i> UI style only (safe)</div> -->
+  </aside>
+
+  <main class="wrap">
+    <!-- HERO -->
+    <div class="hero">
+      <div class="panel">
+        <div class="panelTop">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="title">terminal.session</div>
+          <div class="badge"><i></i> ONLINE</div>
+        </div>
+
+        <div class="terminal">
+          <div class="glitch" data-text="YOUR NAME"><span>Krishna Bahadur Thapa</span></div>
+
+          <div class="line"><span class="prompt">┌─</span> <span class="cmd">whoami</span></div>
+          <div class="line" id="typing"></div>
+
+          <div class="line"><span class="prompt">├─</span> <span class="cmd">skills --top</span></div>
+          <div class="line"><span class="accent">Frontend</span> • Database • Responsive •Project Management </div>
+
+          <div class="line"><span class="prompt">└─$</span> <span class="muted">> Hello, I’m Krishna — Frontend Developer</span></div>
+
+          <div class="actions">
+            <a class="btn" href="#projects">▶ view_projects</a>
+            <a class="btn" href="#contact">✉ contact</a>
+            <a class="btn" href="krishna-Thapa_CV.pdf" download>⬇ download_cv</a>
+          </div>
+        </div>
+      </div>
+
+      <!-- Right Modules -->
+      <div class="panel">
+        <div class="panelTop">
+          <div class="dots"><span></span><span></span><span></span></div>
+          <div class="title">modules.status</div>
+          <div class="badge"><i></i> LIVE</div>
+        </div>
+
+        <div class="modules">
+          <div class="mod">
+            <div class="modTop">
+              <b>identity.module</b>
+              <span class="status"><span class="dotOk"></span> stable</span>
+            </div>
+            <div class="kv"><span>name</span><span class="accent">Krishna</span></div>
+            <div class="kv"><span>role</span><span>• Web Dev</span></div>
+            <div class="kv"><span>location</span><span>Kathmandu, Nepal</span></div>
+          </div>
+
+          <div class="mod">
+            <div class="modTop">
+              <b>security.badges</b>
+              <span class="status"><span class="dotWarn"></span> info</span>
+            </div>
+            <div class="mini">
+              🛡️ Secure-Style UI <br>
+              🎨 Frontend Design <br>
+              ⚙️ Clean Code <br>
+              📱 Fully Responsive
+            </div>
+          </div>
+
+          <div class="mod">
+            <div class="modTop">
+              <b>uptime</b>
+              <span class="status"><span class="dotOk"></span> running</span>
+            </div>
+            <div class="mini" id="uptime">00:00:00</div>
+          </div>
+        </div>
+      </div>
+    </div>
+
+    <!-- PROJECTS -->
+    <section class="panel" id="projects">
+      <div class="panelTop">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="title">/projects</div>
+        <div class="badge"><i></i> click_to_open</div>
+      </div>
+
+      <div class="secBody">
+        <div class="grid">
+          <div class="card pcard" data-title="Month Calculator"
+               data-desc="A terminal-inspired portfolio with matrix rain, modal case study, responsive layout, and theme toggle. Built for style, not hacking actions.">
+            <h3>Month Calculator</h3>
+            <p>Calculator</p>
+            <div class="tags">
+              <span class="tag">HTML</span><span class="tag">CSS</span><span class="tag">JS</span>
+            </div>
+          </div>
+
+          <div class="card pcard" data-title="CV Builder UI"
+               data-desc="Resume builder concept with templates, live preview idea, and clean UI for quick editing.">
+            <h3>CV Builder UI</h3>
+            <p>Templates + Clean UX concept</p>
+            <div class="tags">
+              <span class="tag">UI/UX</span><span class="tag">Forms</span><span class="tag">Design</span>
+            </div>
+          </div>
+
+          <div class="card pcard" data-title="Dashboard UI"
+               data-desc="Admin dashboard layout with cards and clean spacing. Great for projects, analytics, and panels.">
+            <h3>Dashboard UI</h3>
+            <p>Professional layout + sections</p>
+            <div class="tags">
+              <span class="tag">Layout</span><span class="tag">Components</span><span class="tag">Modern</span>
+            </div>
+          </div>
+
+          <div class="card pcard" data-title="Mobile Quiz App"
+               data-desc="Quiz app UX flow with random questions and score screen. Focused on fast interaction.">
+            <h3>Mobile Quiz App</h3>
+            <p>Simple flow + quick screens</p>
+            <div class="tags">
+              <span class="tag">UX</span><span class="tag">Android</span><span class="tag">SQLite</span>
+            </div>
+          </div>
+
+          <div class="card pcard" data-title="Landing Page Kit"
+               data-desc="Reusable sections: hero, features, testimonials, FAQ, footer. Built for conversions and clean UI.">
+            <h3>Landing Page Kit</h3>
+            <p>Reusable UI blocks</p>
+            <div class="tags">
+              <span class="tag">UI Kit</span><span class="tag">CTA</span><span class="tag">Speed</span>
+            </div>
+          </div>
+
+          <div class="card pcard" data-title="Coming Soon"
+               data-desc="Add your next project here. Put your GitHub and live demo links in the modal buttons.">
+            <h3>Coming Soon</h3>
+            <p>Next mission loading...</p>
+            <div class="tags">
+              <span class="tag">2026</span><span class="tag">Growth</span><span class="tag">Next</span>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- ABOUT -->
+    <section class="panel" id="about">
+      <div class="panelTop">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="title">/about</div>
+        <div class="badge"><i></i> profile.txt</div>
+      </div>
+
+      <div class="secBody">
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+          <div class="card" style="cursor:default;">
+            <h3>Lifelong Learning Mindset</h3>
+            <p>
+              <!-- Hi, I’m <span class="accent">Krishna</span>  -->
+              💻 Learn, build, improve, repeat.<br> आज सिकेको कुरा नै भोलिको शक्ति हो। 
+            </p>
+          </div>
+          <div class="card" style="cursor:default;">
+            <h3>Focus</h3>
+            <p>
+              • Frontend • Portfolio/CV systems • Landing pages • Basic DB projects.
+              Always learning and improving.
+            </p>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <!-- CONTACT -->
+    <section class="panel" id="contact">
+      <div class="panelTop">
+        <div class="dots"><span></span><span></span><span></span></div>
+        <div class="title">/contact</div>
+        <div class="badge"><i></i> message.form</div>
+      </div>
+
+      <!-- <div class="secBody">
+        <div class="grid" style="grid-template-columns: 1fr 1fr;">
+          <div class="card" style="cursor:default;">
+            <h3>Send Message (demo)</h3>
+            <p class="muted" style="margin:6px 0 10px; line-height:1.6;">
+              This form is demo-only. I can add EmailJS / backend later.
+            </p>
+            <form id="form">
+              <input style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background: rgba(0,0,0,.18); color:var(--text); outline:none; margin-bottom:10px;"
+                id="name" placeholder="Your Name" required>
+              <input style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background: rgba(0,0,0,.18); color:var(--text); outline:none; margin-bottom:10px;"
+                id="email" type="email" placeholder="Your Email" required>
+              <textarea style="width:100%; padding:12px 12px; border-radius:14px; border:1px solid var(--line); background: rgba(0,0,0,.18); color:var(--text); outline:none; min-height:120px; resize:vertical; margin-bottom:10px;"
+                id="msg" placeholder="Your Message" required></textarea>
+              <button class="btn" type="submit">↳ send_message</button>
+            </form>
+          </div> -->
+
+          <div class="card" style="cursor:default;">
+            <h3>Links</h3>
+            <p style="line-height:1.9;">
+              <!-- Email: <a class="accent" href="mailto:you@example.com">you@example.com</a><br> -->
+              GitHub: <a class="accent" href="https://github.com/krishnathapa43" target="_blank">github.com/krishna45</a><br>
+              LinkedIn: <a class="accent" href="https://www.linkedin.com/in/krishnabahadurthapa/" target="_blank">linkedin.com/in/krishna</a><br>
+              <!-- Facebook: <a class="accent" href="#" onclick="alert('Add your Facebook link'); return false;">facebook.com/yourname</a> -->
+            </p>
+            <div class="sep"></div>
+            <!-- <div class="badge"><i></i> Tip: Replace links with real ones</div> -->
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>
+      2026 © <span id="year"></span> Build and Design By Krishna 
+    </footer>
+  </main>
+
+  <!-- Project Modal -->
+  <div class="mOverlay" id="mOverlay">
+    <div class="modal">
+      <div class="mTop">
+        <b id="mTitle">Project</b>
+        <button class="xbtn" id="closeModal" aria-label="Close">✕</button>
+      </div>
+      <div class="mBody">
+        <div class="mHero"></div>
+        <p id="mDesc"></p>
+        <div class="linkRow">
+          <a class="btn" href="#" onclick="alert('Add GitHub link here'); return false;">GitHub</a>
+          <a class="btn" href="#" onclick="alert('Add Live Demo link here'); return false;">Live Demo</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<script src="index.js"></script>
+</body>
+</html>
