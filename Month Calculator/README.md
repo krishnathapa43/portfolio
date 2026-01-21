@@ -23,7 +23,7 @@ A clean, responsive web tool to calculate month differences between two dates an
 
 ## 🚀 Live Demo
 
-👉 *(Add GitHub Pages link here)*
+👉 *https://krishna-thapa.com.np/Month%20Calculator/index.html*
 
 
 ## 📂 How to Use
